@@ -1,0 +1,70 @@
+<!--
+Generated template for the AgendaPage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar color="secondary">
+		<ion-title>Contactos</ion-title>
+	</ion-navbar>
+
+</ion-header>
+<div class="teclado" [class.activo]="tecladoActivo" id="teclado">
+	 <div class="tecla border-right border-bottom" (click)="beep()">1</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">2</div>
+	 <div class="tecla border-bottom" (click)="beep()">3</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">4</div>
+	 <div class="tecla border-bottom border-right" (click)="beep()">5</div>
+	 <div class="tecla border-bottom" (click)="beep()">6</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">7</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">8</div>
+	 <div class="tecla border-bottom" (click)="beep()">9</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">*</div>
+	 <div class="tecla border-right border-bottom" (click)="beep()">0</div>
+	 <div class="tecla border-bottom" (click)="beep()">#</div>
+	 <div class="tecla" (click)="beep()"></div>
+	<div class="tecla" (click)="beep()"></div>
+	<div class="tecla" (click)="beep()"></div>
+
+</div>
+
+<ion-content>
+	<button ion-item (click)="hacerFoto()">
+        Hacer foto
+      </button>
+
+	<ion-list>
+
+		<ion-item-sliding
+		*ngFor="let contacto of _llamadasService.listin"
+		(ionSwipe)="llamar(contacto)">
+		<ion-item class="contacto"
+		(click)="llamar(contacto)">
+		<ion-avatar item-start class="grande">
+			<img class="avatar" [src]="contacto.img">
+		</ion-avatar>
+		<h2>{{ contacto.nombre }}</h2>
+		<p>{{ contacto.telefono }}</p>
+		<ion-icon item-right ios="ios-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+	</ion-item>
+	<ion-item-options side="left">
+		<button ion-button color="secondary"
+		(click)="llamar(contacto)">
+			<ion-icon name="call"></ion-icon>
+			Llamar
+		</button>
+	</ion-item-options>
+</ion-item-sliding>
+
+</ion-list>
+
+<ion-fab center bottom
+(click)="mostrarTeclado();">
+	<button ion-fab color="secondary">
+		<ion-icon ios="ios-call" md="md-call"></ion-icon>
+	</button>
+</ion-fab>
+
+</ion-content>

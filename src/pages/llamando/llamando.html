@@ -1,0 +1,48 @@
+<!--
+  Generated template for the LlamandoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>llamando</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding class="fondo_degradado llamadaEnCurso" [class.llamadaActiva]="audioContactoReproduciendo">
+	<ion-grid >
+		 <ion-row>
+			  <ion-col class="text-center">
+					<!-- Advanced: explicity set the icon for each platform -->
+
+	            <img class="avatar_llamando" [class.active]="audioContactoReproduciendo" [src]="contacto.img">
+					<h2>{{ contacto.nombre }}</h2>
+					<h6>{{ contacto.telefono }}</h6>
+					<p *ngIf="audioContactoReproduciendo">Llamada...</p>
+					<p *ngIf="colgado">COLGADO</p>
+
+			  </ion-col>
+		 </ion-row>
+
+		 <ion-row class="iconos_llamada">
+		 	<ion-col (click)="mute()">
+
+				<ion-icon *ngIf="this.volumen" ios="ios-volume-up" md="md-volume-up"></ion-icon>
+				<ion-icon *ngIf="!this.volumen" ios="ios-volume-off" md="md-volume-off"></ion-icon>
+
+			</ion-col>
+			<ion-col>
+		 		 <ion-icon ios="ios-call" class="telefono_icon" md="md-call"
+		 		 (click)="colgar()"
+		 		 ></ion-icon>
+		 	</ion-col>
+			<ion-col>
+		 		<ion-icon ios="ios-apps" md="md-apps"></ion-icon>
+		 	</ion-col>
+		 </ion-row>
+	</ion-grid>
+</ion-content>

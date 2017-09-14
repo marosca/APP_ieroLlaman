@@ -1,5 +1,8 @@
 {
   "name": "Llamadas",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "9250d8ba",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

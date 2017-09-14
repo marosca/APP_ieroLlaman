@@ -14,3 +14,119 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.header{
+	min-height: 65px
+}
+ion-navbar{
+	min-height: 65px!important;
+}
+.contacto{
+	min-height: 80px
+}
+.avatar{
+	height: 50px!important;
+	width: 50px!important
+}
+
+.text-center{
+	text-align: center
+}
+
+
+.avatar_llamando{
+	width: 35%;
+	border-radius: 50%;
+	border:2px solid white;
+	transition: width 0.5s ease;
+}
+
+.avatar_llamando.active{
+	width: 60%;
+}
+
+.llamadaEnCurso{
+	color:white!important;
+}
+
+.llamadaEnCurso.fondo_degradado{
+	background: rgba(111,179,242,1);
+	background: -moz-linear-gradient(top, rgba(111,179,242,1) 0%, rgba(12,46,82,1) 59%, rgba(12,46,82,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(111,179,242,1)), color-stop(59%, rgba(12,46,82,1)), color-stop(100%, rgba(12,46,82,1)));
+	background: -webkit-linear-gradient(top, rgba(111,179,242,1) 0%, rgba(12,46,82,1) 59%, rgba(12,46,82,1) 100%);
+	background: -o-linear-gradient(top, rgba(111,179,242,1) 0%, rgba(12,46,82,1) 59%, rgba(12,46,82,1) 100%);
+	background: -ms-linear-gradient(top, rgba(111,179,242,1) 0%, rgba(12,46,82,1) 59%, rgba(12,46,82,1) 100%);
+	background: linear-gradient(to bottom, rgba(111,179,242,1) 0%, rgba(12,46,82,1) 59%, rgba(12,46,82,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fb3f2', endColorstr='#0c2e52', GradientType=0 );
+
+}
+
+
+
+ion-row.iconos_llamada{
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	color: white;
+	font-size: 2em;
+}
+.icono_mute{
+	font-size: 1.5em
+}
+
+.telefono_icon{
+	color:red;
+}
+.telefono_icon:before{
+	background: red;
+	/* padding: 23px; */
+	border-radius: 50%;
+	color: white;
+	width: 70px;
+	height: 70px;
+	font-size: 1.5em;
+	transform: rotate(134deg) translate(-11px,10px);
+	line-height: 70px;}
+
+	/***************** TECLADO LLAMADAS ********************/
+	div.teclado {
+		box-sizing: border-box;
+		border-top: 1px solid #c7c7c7;
+		position: absolute;
+		bottom: -380px;
+		z-index: 998;
+		background: white;
+		transition: bottom 0.1s linear;
+	}
+	div.teclado.activo{
+		bottom: 0
+	}
+	.tecla{
+		display: block;
+		width: 33.33%;
+		text-align: center;
+		float: left;
+		font-size: 2em;
+		padding: 20px;
+		height: 75px;
+	}
+	.tecla:hover{
+		background: rgb(178, 242, 162);
+		color: white
+	}
+	.border-left{
+		border-left: 1px solid #c7c7c7;
+	}
+	.border-right{
+		border-right: 1px solid #c7c7c7;
+	}
+	.border-top{
+		border-top: 1px solid #c7c7c7;
+	}
+	.border-bottom{
+		border-bottom: 1px solid #c7c7c7;
+	}
+
+
+	/**********************/
